@@ -9,4 +9,6 @@ export class BasicsPageComponent {
  public nameLower:string ='carlos';
  public nameUpper:string ='CARLOS';
  public fullname: string ='CarLos HAro'
+
+ public customDate:Date = new Date(); // estas solicitado el dato actual
 }

@@ -1,6 +1,6 @@
-<br>
-<p-panel header="Pipes Básicos"  showHeader="false">
-  <br>
+<br />
+<p-panel header="Pipes Básicos" showHeader="false">
+  <br />
   <h1>Pipes Básicos</h1>
   <p>pipes incluidos en angular-Usauamente en el common Module</p>
 </p-panel>
@@ -19,6 +19,58 @@
   <div class="col-4">
     <p-card header="titleCase">
       {{ fullname | titlecase }}
+    </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card header="Codigo datePape">
+      <ol>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date:'short'</li>
+        <li>fecha | date:'long'</li>
+        <li>fecha | date:'MMMM'</li>
+        <li>fecha | date:'MMMM dd,yyyy'</li>
+      </ol>
+      <hr />
+      <ol>
+        <li>fecha | date:'long':'GMT-5'</li>
+        <li>fecha | date:'long':'GMT-4'</li>
+      </ol>
+      <hr>
+      <ol>
+        <!-- para esto tienes que cargar el idioma que vas a utilizar -->
+          <h3>Hora en Perú</h3>
+        <li>fecha | date:'long':'GMT-5':'es-PE' o fecha | date:'long':'':'es-PE'  </li>
+
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card header="Resulado de los Pape">
+      <ol>
+        <li>{{ customDate }}</li>
+        <li>{{ customDate | date }}</li>
+        <li>{{ customDate | date : "short" }}</li>
+        <li>{{ customDate | date : "long" }}</li>
+        <li>{{ customDate | date : "MMMM" }}</li>
+        <li>{{ customDate | date : "MMMM dd,yyyy" }}</li>
+      </ol>
+      <hr />
+      <ol>
+        <li>{{ customDate | date : "long" : "GMT-5" }}</li>
+        <li>{{ customDate | date : "long" : "GMT-4" }}</li>
+      </ol>
+      <hr>
+      <ol>
+        <h3>Hora en idioma  Perú</h3>
+          <li>{{ customDate | date : "long" : "":'es-PE' }}</li>
+          <h3>Hora en  idioma frances</h3>
+          <li>{{ customDate | date : "long" : "":'fr-CA' }}</li>
+          <h3>Hora en   idioma ingles </h3>
+
+
+      </ol>
     </p-card>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +8,13 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 
-
+// configuracion del locale de la app
+import localeEsPE from '@angular/common/locales/es-PE'
+import localFrCa from '@angular/common/locales/fr-CA'
+import {registerLocaleData} from '@angular/common'
+//esto es neceario para registrar el local dentro de la aplicacion
+registerLocaleData(localeEsPE)
+registerLocaleData(localFrCa);
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +26,12 @@ import { ProductsModule } from './products/products.module';
     BrowserAnimationsModule,
     ProductsModule,
     ],
-  providers: [],
+
+  providers: [
+    {
+      provide:LOCALE_ID,useValue:'es-PE'  //Este establece de local este  idioma
+    }
+  ],  // los providrs son como los servicioss
   bootstrap: [AppComponent]
 })
 export class AppModule { }
