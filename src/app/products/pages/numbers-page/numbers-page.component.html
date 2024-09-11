@@ -1,1 +1,33 @@
-<p>numbers-page works!</p>
+<br>
+<p-panel header="Pipes Básicos" showHeader="false">
+  <br />
+  <h1>Pipes Numericos</h1>
+<p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="grid mt-2">|
+  <div class="col-4">
+    <p-card header="Ventas Netas" subheader="del presente año">
+{{totalSells}} <br>
+{{totalSells | number}} <br>
+{{totalSells | number:'1.2-2'}} <!--le estas indicando de 2 a 2 decimanles--> <br>
+{{totalSells | number:'1.6-6'}}<!--si falta decimales lo completa -->
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="Ventas Bruta" subheader="del presente año">
+      {{totalSells | currency:'USD'}} <!--trasforma el formato del numero en soles-->
+      {{totalSells | currency:'USD' :'symbol-narrow'}} <br>
+      {{totalSells | currency:'PEN' :'symbol-narrow':'1.4-4'}} <br>
+
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="Ventas Bruta" subheader="del presente año">
+      {{porcentaje | percent}} <!--redonde y lo trasforma en porcentaje--> <br>
+      {{porcentaje | percent:'1.2-2'}} <!--redonde y lo trasforma en porcentaje-->
+
+
+    </p-card>
+  </div>
+</div>

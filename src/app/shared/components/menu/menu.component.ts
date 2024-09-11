@@ -34,8 +34,7 @@ export class MenuComponent implements OnInit { // Implementa OnInit
         label: 'Pipes perzonalizados',
         icon: 'pi pi-fw pi-pencil',
         items: [
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
-          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' },
+          { label: 'Custom Pipe', icon: 'pi pi-fw pi-trash',routerLink:'custom' },
         ],
       },
     ];

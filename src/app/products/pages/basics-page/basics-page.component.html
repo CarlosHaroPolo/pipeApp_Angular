@@ -1,5 +1,5 @@
 <br />
-<p-panel header="Pipes Básicos" showHeader="false">
+<p-panel header="Pipes Básicos" showHeader="false" >
   <br />
   <h1>Pipes Básicos</h1>
   <p>pipes incluidos en angular-Usauamente en el common Module</p>
@@ -40,7 +40,7 @@
       <hr>
       <ol>
         <!-- para esto tienes que cargar el idioma que vas a utilizar -->
-          <h3>Hora en Perú</h3>
+          <h3>Hora segun el idioma del pais </h3>
         <li>fecha | date:'long':'GMT-5':'es-PE' o fecha | date:'long':'':'es-PE'  </li>
 
       </ol>
@@ -68,6 +68,7 @@
           <h3>Hora en  idioma frances</h3>
           <li>{{ customDate | date : "long" : "":'fr-CA' }}</li>
           <h3>Hora en   idioma ingles </h3>
+          <li>{{ customDate | date : "long" : "":'en' }}</li>
 
 
       </ol>

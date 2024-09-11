@@ -7,6 +7,9 @@ import {CardModule} from 'primeng/card';
 import {FieldsetModule} from 'primeng/fieldset';
 import {PanelModule} from 'primeng/panel';
 
+import {ToolbarModule} from 'primeng/toolbar';
+import {TableModule} from 'primeng/table';
+
 //su quieres utiliza un modulo por separado para mostar los componentes
 @NgModule({
 imports:[
@@ -17,8 +20,9 @@ exports:[
   ButtonModule,
   CardModule,
   FieldsetModule,
-  PanelModule // PanelModule debe estar exportado
-
+  PanelModule ,// PanelModule debe estar exportado
+  ToolbarModule,
+  TableModule
 ]
 })
 export class PrimeNgModule { }
